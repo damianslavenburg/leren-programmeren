@@ -1,6 +1,6 @@
 print("hallo welcome bij pizzaria mamazia wat is u naam:")
 naam= input()
-print("hallo", naam "hoe kan ik he helpen vandaag")
+print("hallo", naam "hoe kan ik je helpen vandaag")
 print("wilt u een small, medium of large pizza?")
 pizza=input()
 #pizza prijsen
