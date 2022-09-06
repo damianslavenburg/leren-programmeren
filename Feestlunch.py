@@ -1,10 +1,14 @@
 #croisantjes
-# 17 stuks
-# stokbrood 2
+# stokbrood
 #2.78
-print (17 * 0.39)
-print (2 * 2.78)
-print (0.50 * 3)
- 
-y = 17 * 0.39 + 2 * 2.78 -1.50 
-print ( "euro" + str(y)  + " " "nog te betalen")
+
+croisant = input("hoeveel croisant wil je: ")
+prijs_croisant = 0.39
+stokbrood = input("hoeveel stokbrooden wil je: ")
+prijs_stokbrood= 2.78
+kortingsbon = input("hoeveel kortingsbonnen heb je: ")
+kortingsbonnen_prijs = 0.50
+
+y = int(croisant) * prijs_croisant + int(stokbrood) * prijs_stokbrood - int(kortingsbon) * kortingsbonnen_prijs
+print (y)
+print("nog te betalen")
