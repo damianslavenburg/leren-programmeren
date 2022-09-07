@@ -1,5 +1,6 @@
+#damian slavenburg 99072083
 #naam en voorstellen
-naam_res = "pizzaria"
+naam_res = "pizzaria mamaia"
 print("hallo welcome bij", naam_res , "wat is u naam?:")
 naam = input()
 print("hallo" ,naam, "hoe kan ik je helpen vandaag?:")
@@ -32,9 +33,12 @@ totaal= int(pizza_aantal) * prijs
 
 if int(pizza_aantal) == 1 :
     print('---------------------------------')
+    print('       ', naam_res)
     print("u heeft " + str(pizza_aantal) + " " + str(pizza_size) + ' pizza besteld' )
 else:
     print('---------------------------------')
+    print('       ', naam_res)
     print("u heeft " + str(pizza_aantal) + " " + str(pizza_size) + " pizza's besteld" )
-print( 'het totaal bedrag is €' ,totaal ,'danku wel voor het bestellen bij' , naam_res)
+    print( 'het totaal bedrag is €' ,totaal ,)
+print('bestelling geplaats door:', naam)
 print("---------------------------------")
