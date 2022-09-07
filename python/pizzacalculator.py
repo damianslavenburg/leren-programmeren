@@ -34,11 +34,13 @@ totaal= int(pizza_aantal) * prijs
 if int(pizza_aantal) == 1 :
     print('---------------------------------')
     print('       ', naam_res)
-    print("u heeft " + str(pizza_aantal) + " " + str(pizza_size) + ' pizza besteld' )
+    print("   ")
+    print("u heeft " + str(pizza_aantal) + " " + str(pizza_size) + ' pizza besteld')
 else:
     print('---------------------------------')
     print('       ', naam_res)
-    print("u heeft " + str(pizza_aantal) + " " + str(pizza_size) + " pizza's besteld" )
-    print( 'het totaal bedrag is €' ,totaal ,)
+    print('  ')
+    print("u heeft " + str(pizza_aantal) + " " + str(pizza_size) + " pizza's besteld")
+print('het totaal bedrag is €' ,totaal ,)
 print('bestelling geplaats door:', naam)
 print("---------------------------------")
