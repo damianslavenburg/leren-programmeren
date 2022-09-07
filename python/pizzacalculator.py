@@ -42,5 +42,6 @@ else:
     print('  ')
     print("u heeft " + str(pizza_aantal) + " " + str(pizza_size) + " pizza's besteld")
 print('het totaal bedrag is €' ,totaal ,)
+print(" ")
 print('bestelling geplaats door:', naam)
 print("---------------------------------")
