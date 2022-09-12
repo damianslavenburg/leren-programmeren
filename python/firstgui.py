@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+
 layout = [
     [sg.Text("hello from PySimleGUi")],
     [sg.Button('ok')]
@@ -11,4 +12,3 @@ while True:
     if event == "ok" or event == sg.WIN_CLOSED:
         break
 window.close()
-    
