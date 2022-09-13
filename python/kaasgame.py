@@ -59,5 +59,7 @@ while repeat == True:
             if vraag == "nee":
                 repeat = False
                 print("dan is de kaas mozzarella")
-
+else: 
+    repeat = True
+    print(vraag)
 

@@ -1,0 +1,8 @@
+print("--------------------------------------------------------------")
+print("sollicteer formuleer: Circusdirecteur voor Circus HotelDeBotel")
+print("--------------------------------------------------------------")
+print("we gaan u een aantal vragen stellen die te maken hebben met")
+print("de sollitatie")
+print("--------------------------------------------------------------")
+naam = input("wat is u naam?")
+lengte = input("hoe lang bent u?")
