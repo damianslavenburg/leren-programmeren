@@ -25,13 +25,20 @@ while repeat == True:
     elif pizza_size == 'large':
         repeat = False 
         prijs= 10
-    
-    else:
-        print(pizza_menu)
+else:
+    print(pizza_menu)
 
-pizza_aantal= input('hoeveel pizzas wilt u? ' '')
+pizza_aantal = input('hoeveel pizzas wilt u? ' '')
+
 #bonnetje
-totaal= int(pizza_aantal) * prijs  
+try:
+    totaal= int(pizza_aantal) * prijs
+except: 
+    print("dat is geen cijfer")
+
+
+
+
 
 if int(pizza_aantal) == 1 :
     print('---------------------------------')

@@ -44,8 +44,8 @@ if ervaring == "dieren" or "jongleren" or "acrobatiek" :
             if lengte_haar == "10 cm" or "20 cm":
                 if rijbewijs == "vrachtwagen":
                     if hoed == "ja":
-                        if lengte == "150 cm":
-                            if gewicht == "90 kg": 
+                        if lengte == "150":
+                            if gewicht == "90": 
                                 if certificaat == "ja":
                                     goed = True
                                     print("gefeliciteerd u bent in aanraking met de baan :Circusdirecteur voor Circus HotelDeBotel stuur snel u cv op.")

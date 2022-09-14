@@ -61,5 +61,5 @@ while repeat == True:
                 print("dan is de kaas mozzarella")
 else: 
     repeat = True
-    print(vraag)
+    
 
