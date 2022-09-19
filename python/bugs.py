@@ -28,7 +28,7 @@ num1 = random.randint(1,10)
 num2 = random.randint(5,15)
 
 try:
-    number = input('En weet jij wat ' + str(num1) + "+"  + str(num2) +' is? ') 
+    number = int(input('En weet jij wat ' + str(num1) + "+"  + str(num2) +' is? '))
     if int(number == num1 + num2):
         print('Dat is juist')
     else:
