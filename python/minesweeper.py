@@ -9,6 +9,7 @@ while play == True:
         if int(guess) == bomb:
                 play = False
                 print("game over bomb exploded")
+        
         elif int(guess) < 1: 
                 print('less than 1 is no possible')
                 play = True
@@ -16,7 +17,7 @@ while play == True:
         elif int(guess) > 10 :
                 print('more than 10 is not possible')
                 play = True
-        
+       
         else: 
                 score = score + (ronde * ronde)
                 ronde = ronde + 1
