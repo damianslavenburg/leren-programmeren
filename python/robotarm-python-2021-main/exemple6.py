@@ -10,48 +10,13 @@ robotArm.grab()
 robotArm.moveRight()
 robotArm.drop()
 
-for i in range(2):
-    robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-
-for i in range(2):
-    robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-
-for i in range(2):
-    robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-
-for i in range(2):
-    robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-
-for i in range(2):
-    robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-
-for i in range(2):
-    robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-for i in range(2):
-    robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-
-
+for x in range(7):
+    
+    for i in range(2):
+        robotArm.moveLeft()
+    robotArm.grab()
+    robotArm.moveRight()
+    robotArm.drop()
 
 
 
