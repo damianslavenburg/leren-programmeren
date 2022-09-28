@@ -2,8 +2,7 @@ from time import sleep
 
 for x in range (0,13):
     print(x , "am")
-    sleep(1)
+
 
 for x in range (13,24):
     print(x , "pm")
-    sleep(1)
