@@ -1,8 +1,8 @@
 # damian: 
 # 99072083:
 # betalen en wissel geld bereken: 
-# function of program:
-# structure of program: 
+# wissel geld bereken:
+# eerst input daarna berekenen: 
 
 toPay = int(float(input('Amount to pay: '))* 100) #
 paid = int(float(input('Paid amount: ')) * 100) #
@@ -14,7 +14,7 @@ if change > 0: #
   while change > 0 and coinValue > 0: #
     nrCoins = change // coinValue #
 
-    if nrCoins > 0: #
+    if nrCoins > 0: # 
       print('return maximal ', nrCoins, ' coins of ', coinValue, ' cents!' ) #
       nrCoinsReturned = int(input('How many coins of ' + str(coinValue) +  ' cents did you return? ')) #
       change -= nrCoinsReturned * coinValue #
