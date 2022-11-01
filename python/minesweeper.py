@@ -23,9 +23,9 @@ while play == True:
                         score = score + (ronde * ronde)
                         ronde = ronde + 1
                         print("u are safe")
-                        nextronde = input('do you want to go to round '+ str(ronde) +'(y/n)')
+                        nextronde = input('do you want to go to round '+ str(ronde) +'(y/n)').lower()
                         play = True
-                        if nextronde == "n":
+                        if nextronde == "no" or "n":
                                 play = False
         except:
                 print('that is not a number')
