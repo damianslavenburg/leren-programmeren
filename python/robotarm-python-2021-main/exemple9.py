@@ -1,6 +1,7 @@
 from logging import RootLogger
 from RobotArm import RobotArm
 robotArm = RobotArm('exercise 9')
+robotArm.speed = 5
 # Jouw python instructies zet je vanaf hier:
 for i in range(1,5):
     for x in range(i):

@@ -1,7 +1,7 @@
 from RobotArm import RobotArm
 
 robotArm = RobotArm('exercise 12')
-robotArm.speed = 2
+robotArm.speed = 5
 l = 10
 v = 10
 repeat = True

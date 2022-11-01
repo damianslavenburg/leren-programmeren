@@ -1,17 +1,18 @@
 from RobotArm import RobotArm
 
 robotArm = RobotArm('exercise 7')
+robotArm.speed = 5
 
 # Jouw python instructies zet je vanaf hier:
-k = 1
 for x in range(5):
-    for i in range(k):
+    for i in range(6):
         robotArm.moveRight()
-    robotArm.grab()
-    k = k + 1
-    for j in range(1):
+        robotArm.grab()
         robotArm.moveLeft()
-    robotArm.drop()
+        robotArm.drop()
+    robotArm.moveRight()
+    robotArm.moveRight()   
+
         
   
 

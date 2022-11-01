@@ -4,6 +4,8 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 13')
 robotArm = RobotArm()
 robotArm.randomLevel(1,7)
+robotArm.speed = 5
+
 # Jouw python instructies zet je vanaf hier:
 drop = True
 l = 1
