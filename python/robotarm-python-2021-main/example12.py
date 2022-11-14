@@ -1,15 +1,14 @@
 from RobotArm import RobotArm
 
 robotArm = RobotArm('exercise 12')
-robotArm.speed = 5
+robotArm.speed = 2
 l = 10
-v = 10
+v = 9
 repeat = True
 # Jouw python instructies zet je vanaf hier:
 while v > 0:
     repeat = True
     robotArm.grab()
-    robotArm.scan()
     if robotArm.scan() == "red":
         for x in range(l):
             robotArm.moveRight()

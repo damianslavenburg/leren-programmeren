@@ -15,8 +15,7 @@ while robotArm.grab() == True:
         robotArm.drop()
         for x in range(l): 
             robotArm.moveLeft()
-        l = l + 1
-        
+        l = l + 1    
 else:
     quit
 
