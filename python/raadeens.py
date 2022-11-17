@@ -5,6 +5,7 @@ keergeraden = 0
 ronde = 0
 repeat = True
 score = 0
+
 while repeat == True:
     # print(getal)
     raad = int(input("getal: "))
