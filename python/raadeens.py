@@ -6,19 +6,23 @@ ronde = 0
 repeat = True
 score = 0
 while repeat == True:
-    print(getal)
+    # print(getal)
     raad = int(input("getal: "))
     verschill = raad - getal
-    if abs(int(verschill)) <= 20:
+
+    if abs(int(verschill)) <= 20 and abs(int(verschill)) != 0 :
         print("je bent heel warm")
         repeat = True
-    elif abs(int(verschill)) <= 50:
+
+    elif abs(int(verschill)) <= 50 and abs(int(verschill)) != 0 :
         print("je bent warm")
         repeat = True
+
     if raad  < getal:
             print("hoger")
             keergeraden = keergeraden + 1
             repeat = True
+
     elif raad > getal:
             print("lager")
             keergeraden = keergeraden + 1
