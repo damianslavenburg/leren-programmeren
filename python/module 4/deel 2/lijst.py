@@ -3,7 +3,7 @@ lijst = ['Maserati','Mazda','Mercedes-Benz','MG','Mini']
 for x in range(5):
 
     print(lijst[x])
-    
+
 
 tuple = ('Maserati','Mazda','Mercedes-Benz','MG','Mini')
 for x in range(5):
@@ -21,3 +21,5 @@ for key, value in mydict.items():
         print(key)
 for key, value in mydict.items():
     print(key,value)  
+dir(mydict)
+print(dir(mydict))
