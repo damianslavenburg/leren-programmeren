@@ -7,7 +7,7 @@ while repeat == True:
 
     if item in lijst:
             lijst[item] = lijst[item] + aantal
-            repeat = True
+
 
     else:
             lijst[item] = aantal
@@ -21,7 +21,7 @@ while repeat == True:
         repeat = False
 
 
-        print("\nHier is jou lijst:")
+        print("Hier is jou lijst:")
         print("---------------------------")
         for key, value in lijst.items():
             print(value,"x ",key)

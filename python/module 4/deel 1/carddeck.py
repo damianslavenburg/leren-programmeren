@@ -9,4 +9,6 @@ for x in range(len(mycards)):
 random.shuffle(deck)
 for i in range(7): 
     print(deck[i])
-print(deck[7:54])
+    deck.pop(i)
+print(deck[0:47])
+
