@@ -1,7 +1,12 @@
 from fruitmand import fruitmand
 total = 0 
+fruitmand.append({ 
+    'name' : 'watermeloen',
+    'weight' : 2500,
+    'color' : 'red',
+    'round' : True})
 for fruit in  range(len(fruitmand)):
-        gewicht =  print(dict.get('weight'))
+        gewicht = fruitmand[fruit]['weight']
         total = total + gewicht
-print(gewicht)
+print(total)
     
