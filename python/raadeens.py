@@ -47,8 +47,7 @@ while repeat == True:
         keergeraden = keergeraden - keergeraden
         score = score + 1
         print("u bent bij ronde",ronde)
-        nogeenronde = input("wilt u nog een ronde(yes of no)").lower()
-
+        nogeenronde = input("wilt u nog een ronde(yes of no)").lower()  
         if nogeenronde == "yes" or "ja":
             getal = random.randint(1,1000)
             repeat = True
