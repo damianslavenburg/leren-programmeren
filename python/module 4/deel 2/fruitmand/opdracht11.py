@@ -23,8 +23,6 @@ for fruit in fruitmand:
                     rond += 1
                 else:
                     nietrond += 1
-print (rond)
-print (nietrond)
 verschil = rond - nietrond
 verschil = abs(verschil)
 if rond > nietrond:
