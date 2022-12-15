@@ -1,13 +1,16 @@
-from fruitmand import *
+from fruitmand import fruitmand
 namen = []
 tellen = []
-number = 0
+voorindex = 0
 vertaling = {
     "red" : "rode",
     "orange" : "oranje",
     "green" : "groene",
     "brown" : "bruine",
-    "yellow" : "gele"
+    "yellow" : "gele",
+    "pink" : "roze",
+    "black" : "zwarte"
+
 }
 for x in range(len(fruitmand)):
     namen.append(fruitmand[x]["name"])

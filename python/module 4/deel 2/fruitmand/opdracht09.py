@@ -1,7 +1,6 @@
 from fruitmand import fruitmand
 kleuren = []
-for x in range (len(fruitmand)):
-    fruitmand.remove({fruitmand[x].get("druif")})
+for fruit in fruitmand:
     if fruit['name']=='druif':
         fruitmand.pop(fruitmand.index(fruit))
 for i in range (len(fruitmand)):

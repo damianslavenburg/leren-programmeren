@@ -1,3 +1,4 @@
 from fruitmand import fruitmand
-for fruit in range(1,2):
-    print(fruitmand[fruit]["weight"])
+for x in range(len(fruitmand)):
+    if fruitmand[x]["name"] == "appel":
+        print(fruitmand[x]["weight"])
