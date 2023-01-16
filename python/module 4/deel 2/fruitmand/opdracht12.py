@@ -10,7 +10,6 @@ vertaling = {
     "yellow" : "gele",
     "pink" : "roze",
     "black" : "zwarte"
-
 }
 for x in range(len(fruitmand)):
     namen.append(fruitmand[x]["name"])
@@ -19,7 +18,7 @@ namen.reverse()
 langste = namen[0]
 letters = len(langste)
 for x in range(len(fruitmand)):
-    if fruitmand[x]["name"]== langste:
+    if fruitmand[x]["name"] == langste:
         gewicht = fruitmand[x]["weight"]
         kleur = fruitmand[x]["color"]
 gewicht = gewicht / 1000
