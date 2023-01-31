@@ -21,7 +21,3 @@ try:
 except (ConnectionRefusedError, ConnectionError):
     print(f"Could not connect to server at {HOST}:{PORT}")
     client_socket.close()
-
-except (ConnectionResetError, BrokenPipeError):
-    print(f"Connection with {HOST}:{PORT} closed.")
-    client_socket.close()
