@@ -1,23 +1,52 @@
 import socket
+import tkinter as tk
 
-HOST = input("Enter server IP address: ")
+
+HOST = '127.0.0.1'
 PORT = 12345
 
-client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-try:
-    client_socket.connect((HOST, PORT))
-    print("Connected to server.")
-    while True:
-        client_input = input("You: ")
-        client_socket.send(client_input.encode())
-        if client_input.strip().lower() == 'stop':
-            print("Exiting chat...")
-            client_socket.send("stop".encode())
-            client_socket.close()
-            break
-        server_response = client_socket.recv(1024).decode()
-        print(f"Server: {server_response}")
-except (ConnectionRefusedError, ConnectionError):
-    print(f"Could not connect to server at {HOST}:{PORT}")
-    client_socket.close()
+def send_message():
+    message = client_text.get()
+    client_socket.send(message.encode())
+    if message == 'stop':
+        client_socket.close()
+        root.quit()
+    client_text.set("")
+    receive_message()
+
+
+def receive_message():
+    try:
+        data = client_socket.recv(1024).decode()
+        server_text.set(data)
+    except:
+        pass
+
+    root.after(10, receive_message)
+
+
+root = tk.Tk()
+root.title("Chat Client")
+root.geometry("300x400")
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect((HOST, PORT))
+
+client_text = tk.StringVar()
+server_text = tk.StringVar()
+
+client_label = tk.Label(root, text="Client")
+client_label.pack()
+
+client_entry = tk.Entry(root, textvariable=client_text)
+client_entry.pack()
+
+send_button = tk.Button(root, text="Send", command=send_message)
+send_button.pack()
+
+server_label = tk.Label(root, textvariable=server_text)
+server_label.pack()
+
+root.after(10, receive_message)
+root.mainloop()
