@@ -1,21 +1,21 @@
-def fibonacci(n):
-    a, b = 0, 1
-    result = []
-    for i in range(n):
-        result.append(b)
-        a, b = b, a + b
-    return result
+import random
 
-def golden_ratio(numbers):
-    a = numbers[-2]
-    b = numbers[-1]
-    return b / a
+def fibonaci(aantal:int):
+    fibonacci = []
+    var1 = 0
+    var2 = 1
+    fibonacci.append(var1)
+    fibonacci.append(var2)
+    aantal = aantal - 2
 
-def main(n):
-    fib_numbers = fibonacci(n)
-    print("Fibonacci numbers:", fib_numbers)
-    ratio = golden_ratio(fib_numbers)
-    print("Golden ratio:", ratio)
+    for i in range(aantal):
+        fibonacci.append(fibonacci[var1] + fibonacci[var2])
+        var1 = var1 + 1 
+        var2 = var2 + 1 
 
-if __name__ == "__main__":
-    main(10)
+    return fibonacci
+
+
+aantal = input("Hoeveel getallen will je? ")
+
+print(fibonaci(int(aantal)))
