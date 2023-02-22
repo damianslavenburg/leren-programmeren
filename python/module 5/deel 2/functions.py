@@ -181,7 +181,7 @@ def getInvestorsCuts(profitGold:float, investors:list) -> list:
     
     investors = getInterestingInvestors(investors)
     for x in range(len(investors)):
-        amountofgold.append(round((profitGold/100)*investors[x]["profitReturn"],2))
+        amountofgold.append(round((profitGold/100)*investors[x]["profitReturn"] ,2))
     return amountofgold
 
 def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:list) -> float:
@@ -196,7 +196,44 @@ def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:list) -> f
 ##################### M04.D02.O13 #####################
 
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+    people = [mainCharacter] + friends + investors
+    earnings = []
+
+    # haal de juiste inhoud op
+    adventuringFriends = getAdventuringFriends(friends)
+    adventuringInvestors = getAdventuringInvestors(investors)
+    investorsCuts = getInvestorsCuts(profitGold ,getInterestingInvestors(investors))
+    goldCut = round(getAdventurerCut(profitGold,investorsCuts,len([mainCharacter]+adventuringFriends+getAdventuringInvestors(investors))),2)
+
+    
+    donation = 10
+    
+    
+    # verdeel de uitkomsten
+    for person in people:
+
+        #code aanvullen
+
+        start = getPersonCashInGold(person["cash"])
+        end = start
+        if person == mainCharacter:
+            end = round((start+goldCut)+(donation*len(adventuringFriends)),2)
+        if person in adventuringFriends:
+            end = round((start+goldCut)-donation,2)
+        if "profitReturn" in person:
+            if person in getInterestingInvestors(investors):
+                if person in getAdventuringPeople(investors):
+                    end = round((profitGold/100)*person["profitReturn"]+start+goldCut,2)
+                else:
+                    end = round((profitGold/100)*person["profitReturn"]+start,2)
+        earnings.append({
+            'name'   : person["name"],
+            'start'  : start,
+            'end'    : end
+        })
+    
+        
+    return earnings
 
 ##################### view functions #####################
 def print_colorvars(txt:str='{}', vars:list=[], color:str='yellow') -> None:
