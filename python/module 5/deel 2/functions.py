@@ -118,7 +118,7 @@ def getCashInGoldFromPeople(people:list) -> float:
         friendscash+=silver2gold(people[x]["cash"]["silver"])
         friendscash+= people[x]["cash"]["gold"]
         friendscash+=platinum2gold(people[x]["cash"]["platinum"])
-        friendscash=round(friendscash,2)
+        friendscash= round(friendscash,2)
     return friendscash
 
 
