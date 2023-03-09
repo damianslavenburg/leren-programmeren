@@ -25,7 +25,7 @@ def bolletjes():
         print('dan krijgt u een hoorntje met ' + str(bolletjes) + ' bolletjes.')
     else: 
         print('Sorry, dat begrijp ik niet.')
-        keuze = input('wilt u een bakje of een hoorntje? ')
+        keuze = input('wilt u een bakje of een hoorntje?')
 
     
 
