@@ -65,22 +65,24 @@ def verpakking(aantalbolletjes) -> str:
             error()
             herhalen = True
 ## Kiezen van smaak
-def smaaken(aantalbolletjes) -> str:
+def smaaken(bolletjenummer) -> str:
     herhalen = True
+
     while herhalen == True:
-        try:
-            smaak = input('Welke smaak wilt u voor bolletje nummer '+ str(aantalbolletjes) + '? A) Aardbei, C) Chocolade, M) Munt of V) Vanille?').lower()
+            smaak = input('Welke smaak wilt u voor bolletje nummer '+ str(bolletjenummer) +  '? A) Aardbei, C) Chocolade, M) Munt of V) Vanille?').lower()
             if smaak in smaaksoort.keys():
-                smaak = smaaksoort[smaak]
-                smaken[smaak] += aantalbolletjes
-                herhalen = False
                 return smaak
             else:
                 error()
                 herhalen = True
-        except:
-            error()
-            herhalen = True
+    
+
+def smaakkeuze(aantalbolletjes) -> str:
+    for i in range(aantalbolletjes):
+        keuze = smaaksoort.get(smaaken(i+1))
+        smaken[keuze] += 1
+
+
 
 
 
