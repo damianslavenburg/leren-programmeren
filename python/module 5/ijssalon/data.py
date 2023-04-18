@@ -15,3 +15,15 @@ prijs = {
     "hoorntjes": 1.25,
     "bakjes": 0.75,
 }
+smaken = {
+    "Aardbei": 0,
+    "Chocolade": 0,
+    "Munt": 0,
+    "Vanille": 0,
+}
+smaaksoort = {
+    "a": "Aardbei",
+    "c": "Chocolade",
+    "m": "Munt",
+    "v": "Vanille",
+}

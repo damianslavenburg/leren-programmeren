@@ -46,7 +46,7 @@ def verpakking(aantalbolletjes) -> str:
     herhalen = True
     while herhalen == True:
         try:
-            if aantalbolletjes <4:
+            if aantalbolletjes < 4:
                 bakje = input('Wilt u deze '+ str(aantalbolletjes) +' bolletje(s) in een hoorntje of een bakje?  ').lower()
                 if bakje == 'bakje':
                     verpakking = 'bakje'
@@ -64,6 +64,27 @@ def verpakking(aantalbolletjes) -> str:
         except:
             error()
             herhalen = True
+## Kiezen van smaak
+def smaaken(aantalbolletjes) -> str:
+    herhalen = True
+    while herhalen == True:
+        try:
+            smaak = input('Welke smaak wilt u voor bolletje nummer '+ str(aantalbolletjes) + '? A) Aardbei, C) Chocolade, M) Munt of V) Vanille?').lower()
+            if smaak in smaaksoort.keys():
+                smaak = smaaksoort[smaak]
+                smaken[smaak] += aantalbolletjes
+                herhalen = False
+                return smaak
+            else:
+                error()
+                herhalen = True
+        except:
+            error()
+            herhalen = True
+
+
+
+
 
 ## Keuze van meerbestellen ja of nee
 def meerbestellen() -> bool:
@@ -81,6 +102,8 @@ def meerbestellen() -> bool:
         error()
     return nognkeer
 
+
+
 ## Berekening van de prijs
 def prijsberekening():
     totaalprijs = (bonnetje["bolletjes"] * prijs["bolletjes"]) + (bonnetje["hoorntjes"] * prijs["hoorntjes"]) + (bonnetje["bakjes"] * prijs["bakjes"])
@@ -88,15 +111,28 @@ def prijsberekening():
 ## kassabon
 def kassabon():
     #prijsen
-    prijsBolletjes = bonnetje["bolletjes"] * prijs["bolletjes"]
+    smakenprijsenAardbei = smaken["Aardbei"] * prijs["bolletjes"]
+    smakenprijsenChocolade = smaken["Chocolade"] * prijs["bolletjes"]
+    smakenprijsenMunt = smaken["Munt"] * prijs["bolletjes"]
+    smakenprijsenVanille = smaken["Vanille"] * prijs["bolletjes"]
     prijsbakjes = bonnetje["bakjes"] * prijs["bakjes"]
     prijsHoorntjes = bonnetje["hoorntjes"] * prijs["hoorntjes"]
+
     #bonnetje
 
     print("-=-=-=-=-=-=-=-=-=-=-Papi Gelato-=-=-=-=-=-=-=-=-=-=-=-")
+    print("Dit is uw bonnetje:")
+    if smaken["Aardbei"] > 0:
+        print(f"b.Aardbei {smaken['Aardbei']} x € {prijs['bolletjes']:.2f} = € {smakenprijsenAardbei:.2f}")
 
-    if bonnetje["bolletjes"] > 0:
-        print(f"bolletjes {bonnetje['bolletjes']} x € {prijs['bolletjes']:.2f} = € {prijsBolletjes:.2f}")
+    if smaken["Chocolade"] > 0:
+        print(f"b.Chocolade {smaken['Chocolade']} x € {prijs['bolletjes']:.2f} = € {smakenprijsenChocolade:.2f}")
+
+    if smaken["Munt"] > 0:
+        print(f"b.Munt {smaken['Munt']} x € {prijs['bolletjes']:.2f} = € {smakenprijsenMunt:.2f}")
+
+    if smaken["Vanille"] > 0:
+        print(f"b.Vanille {smaken['Vanille']} x € {prijs['bolletjes']:.2f} = € {smakenprijsenVanille:.2f}")
 
     if bonnetje["hoorntjes"] > 0:
      print(f"hoorntjes {bonnetje['hoorntjes']} x € {prijs['hoorntjes']:.2f} = € {prijsHoorntjes:.2f}")
